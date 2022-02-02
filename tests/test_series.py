@@ -1,6 +1,6 @@
 import pytest
 
-from math_series.series import pre_test, fibonacci
+from math_series.series import lucas, pre_test, fibonacci, sum_series
 
 # function to see if pytest is working
 def test_function():
@@ -37,9 +37,25 @@ def test_four():
 
 # tests for lucas numbers
 
+def test_lucas_one():
+  actual = lucas(0)
+  expected = 2
+  assert actual == expected
+
+def test_lucas_two():
+  actual = lucas(1)
+  expected = 1
+  assert actual == expected
+
+def test_lucas_wrong_one():
+  actual = lucas(0)
+  expected = 3
+  assert actual != expected
 
 
+# Tests for sum_series
 
-
-
-
+def test_sum_series():
+  actual = sum_series(0)
+  expected = 0
+  assert actual == expected
